@@ -1,5 +1,5 @@
 exports.up = function(knex) {
-  return knex.schema.createTable("tee_times_appointments", function(table) {
+  return knex.schema.createTable("tee_times_customers", function(table) {
     table.increments();
     table
       .integer("customer_id")
