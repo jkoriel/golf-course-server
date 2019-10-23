@@ -3,11 +3,14 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 8000;
 const cors = require("cors");
+const { Model } = require("objection");
 const logger = require("morgan");
 const knex = require("./db/knex");
 
 const customers = require("./routes/customersRoutes");
 const tee_times = require("./routes/tee_timesRoutes");
+
+Model.knex(knex);
 
 const app = express();
 
